@@ -11,6 +11,17 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('./fonts/Freesentation-4Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 body {
     background-color: #ccc;
 }
