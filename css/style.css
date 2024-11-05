@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Galmuri9';
+    src: url("./fonts/Galmuri11.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MangoByeolbyeol';
+    src: url('./fonts/MangoByeolbyeol.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #ccc;
+}
+
+.fork-me {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.fork-me img {
+    width: 224px;
+    height: 224px;
+}
+
+textarea[name="image-text"] {
+    width: 224px;
+    resize: none;
+    padding: 0;
+    margin: 0 auto;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-family: initial !important;
+}
+
+.centered-textarea {
+    width: 80%; /* 원하는 너비 */
+    height: 100px !important; /* 원하는 높이 */
+    text-align: center; /* 수평 중앙 정렬 */
+    padding: 40px 0; /* 상하 패딩으로 수직 중앙에 위치하도록 조정 */
+    line-height: 1.5; /* 행 간격으로 텍스트 위치 조정 */
+    resize: none; /* 사용자가 크기를 변경할 수 없도록 설정 (선택 사항) */
+}
+
+.image-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-display img {
+    display: block;
+    margin: 15px auto;
+    object-fit: contain; /* Keeps the text scaling proportional */
+}
+
+.code-example {
+    display: none;
+    font-family: FontAwesome, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.hidden{
+    display: hidden !important;
+}
+canvas{
+    width: 224px;
+}
+
+@media (max-width: 767px) {
+    .fork-me img {
+        width: 120px;
+    }
+}
