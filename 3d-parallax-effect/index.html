@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+        --s: 300px; /* the image size */
+        
+        width: var(--s);
+        aspect-ratio: 1;
+        box-sizing: border-box;
+        padding-inline: calc(var(--s)/10) 0;
+        object-fit: cover;
+        border-radius: 20px;
+        transform: perspective(350px) rotateY(calc(var(--_i,1)*10deg));
+        transition: .5s;
+        cursor: pointer;
+        background: url(https://picsum.photos/id/776/400/500) 50%/cover; 
+        }
+        img:hover {
+        --_i: -1;
+        padding-inline: 0 calc(var(--s)/10);
+        }
+
+        body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+        background: #C7F464;
+        } 
+    </style>
+</head>
+<body>
+    <img src="./images/4.PNG" alt="a bird" >
+</body>
+</html>
