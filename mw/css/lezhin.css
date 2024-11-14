@@ -39,38 +39,15 @@ h1 {font-weight:bold;font-size:2rem;line-height:1.4}
 #prev {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-	color: #000000;
+	color: #fff;
   padding: 8px 20px;
   margin:0 auto;
-	background: -moz-linear-gradient(
-		top,
-		#ffffff 0%,
-		#5bf079 50%,
-		#47de7c 50%,
-		#19b037 65%,
-		#2f8a21);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#ffffff),
-		color-stop(0.50, #5bf079),
-		color-stop(0.50, #47de7c),
-		color-stop(0.65, #19b037),
-		to(#2f8a21));
+	background: #000;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	border: 1px solid #000000;
-	-moz-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 5px rgba(16,161,96,0.6);
-	-webkit-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-	box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 5px rgba(16,161,96,0.6);
-	text-shadow:
-		0px -1px 3px rgba(255,255,255,0.8),
-		0px 1px 0px rgba(255,255,255,0.3);
+	
 }
 
 .list_ideal {display:flex;justify-content:space-evenly}
@@ -122,6 +99,8 @@ footer {
 
 /* media */
 @media (max-width:525px){
-  .list_ideal {display:block}
+  .list_ideal {ddisplay: flex;
+	align-items: center;
+	gap: 10px;}
   .list_ideal li {width:90%;margin:15px auto 0}
 }
