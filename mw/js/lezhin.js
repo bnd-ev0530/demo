@@ -30,82 +30,82 @@ if(!window['lezhin']) {
       getLists() {
         return [
           {
-            name: '111',
+            name: '느좋미넌',
             imgSrc: 'images/01.JPG',
             selected: false
           },
           {
-            name: '222',
+            name: '미친미넌',
             imgSrc: 'images/02.JPG',
             selected: false
           },
           {
-            name: '333',
+            name: '화보미넌',
             imgSrc: 'images/03.JPG',
             selected: false
           },
           {
-            name: '444',
+            name: '부부미넌',
             imgSrc: 'images/04.JPG',
             selected: false
           },
           {
-            name: '555',
+            name: '나나투어미넌',
             imgSrc: 'images/05.JPG',
             selected: false
           },
           {
-            name: '666',
+            name: '느좋미넌2',
             imgSrc: 'images/06.JPG',
             selected: false
           },
           {
-            name: '777',
+            name: '미친미넌2',
             imgSrc: 'images/07.JPG',
             selected: false
           },
           {
-            name: '888',
+            name: '화보미넌2',
             imgSrc: 'images/08.JPG',
             selected: false
           },
           {
-            name: '999',
+            name: '부부미넌2',
             imgSrc: 'images/09.JPG',
             selected: false
           },
           {
-            name: '101010',
+            name: '나나투어미넌2',
             imgSrc: 'images/10.JPG',
             selected: false
           },
           {
-            name: '111111',
+            name: 'xx미넌11',
             imgSrc: 'images/11.JPG',
             selected: false
           },
           {
-            name: '121212',
+            name: 'xx미넌12',
             imgSrc: 'images/12.JPG',
             selected: false
           },
           {
-            name: '131313',
+            name: 'xx미넌13',
             imgSrc: 'images/13.JPG',
             selected: false
           },
           {
-            name: '141414',
+            name: 'xx미넌14',
             imgSrc: 'images/14.JPG',
             selected: false
           },
           {
-            name: '151515',
+            name: 'xx미넌15',
             imgSrc: 'images/15.JPG',
             selected: false
           },
           {
-            name: '161616',
+            name: 'xx미넌16',
             imgSrc: 'images/16.JPG',
             selected: false
           }
