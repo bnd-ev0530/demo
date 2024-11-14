@@ -31,82 +31,82 @@ if(!window['lezhin']) {
         return [
           {
             name: '111',
-            imgSrc: 'images/01.jpg',
+            imgSrc: 'images/01.JPG',
             selected: false
           },
           {
             name: '222',
-            imgSrc: 'images/02.jpg',
+            imgSrc: 'images/02.JPG',
             selected: false
           },
           {
             name: '333',
-            imgSrc: 'images/03.jpg',
+            imgSrc: 'images/03.JPG',
             selected: false
           },
           {
             name: '444',
-            imgSrc: 'images/04.jpg',
+            imgSrc: 'images/04.JPG',
             selected: false
           },
           {
             name: '555',
-            imgSrc: 'images/05.jpg',
+            imgSrc: 'images/05.JPG',
             selected: false
           },
           {
             name: '666',
-            imgSrc: 'images/06.jpg',
+            imgSrc: 'images/06.JPG',
             selected: false
           },
           {
             name: '777',
-            imgSrc: 'images/07.jpg',
+            imgSrc: 'images/07.JPG',
             selected: false
           },
           {
             name: '888',
-            imgSrc: 'images/08.jpg',
+            imgSrc: 'images/08.JPG',
             selected: false
           },
           {
             name: '999',
-            imgSrc: 'images/09.jpg',
+            imgSrc: 'images/09.JPG',
             selected: false
           },
           {
             name: '101010',
-            imgSrc: 'images/10.jpg',
+            imgSrc: 'images/10.JPG',
             selected: false
           },
           {
             name: '111111',
-            imgSrc: 'images/11.jpg',
+            imgSrc: 'images/11.JPG',
             selected: false
           },
           {
             name: '121212',
-            imgSrc: 'images/12.jpg',
+            imgSrc: 'images/12.JPG',
             selected: false
           },
           {
             name: '131313',
-            imgSrc: 'images/13.jpg',
+            imgSrc: 'images/13.JPG',
             selected: false
           },
           {
             name: '141414',
-            imgSrc: 'images/14.jpg',
+            imgSrc: 'images/14.JPG',
             selected: false
           },
           {
             name: '151515',
-            imgSrc: 'images/15.jpg',
+            imgSrc: 'images/15.JPG',
             selected: false
           },
           {
             name: '161616',
-            imgSrc: 'images/16.jpg',
+            imgSrc: 'images/16.JPG',
             selected: false
           }
         ];
