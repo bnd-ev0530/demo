@@ -17,7 +17,7 @@
     <![endif]-->
     <div class="wrap">
       <header>
-        <h1>최애미넌드컵</h1>
+        <h1 onclick="restart()">최애미넌드컵</h1>
         <p id="roundTitle">나의 최애미넌을 뽑아주세요!</p>
       </header>
       <div class="content default" id="content">
@@ -46,6 +46,10 @@
           hiddenNode.appendChild(imgNode);
         }
         tObj.appendChild(hiddenNode);
+      }
+
+      function restart(){
+        location.reload();
       }
     </script>
   </body>
