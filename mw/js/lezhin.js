@@ -30,83 +30,83 @@ if(!window['lezhin']) {
       getLists() {
         return [
           {
-            name: '느좋미넌',
-            imgSrc: 'images/01.JPG',
+            name: '111',
+            imgSrc: 'images/1.jpg',
             selected: false
           },
           {
-            name: '미친미넌',
-            imgSrc: 'images/02.JPG',
+            name: '222',
+            imgSrc: 'images/02.gif',
             selected: false
           },
           {
-            name: '화보미넌',
-            imgSrc: 'images/03.JPG',
+            name: '333',
+            imgSrc: 'images/03.gif',
             selected: false
           },
           {
-            name: '부부미넌',
-            imgSrc: 'images/04.JPG',
+            name: '444',
+            imgSrc: 'images/04.gif',
             selected: false
           },
           {
-            name: '나나투어미넌',
-            imgSrc: 'images/05.JPG',
+            name: '555',
+            imgSrc: 'images/05.gif',
             selected: false
           },
           {
-            name: '느좋미넌2',
-            imgSrc: 'images/06.JPG',
+            name: '666',
+            imgSrc: 'images/06.gif',
             selected: false
           },
           {
-            name: '미친미넌2',
-            imgSrc: 'images/07.JPG',
+            name: '777',
+            imgSrc: 'images/07.gif',
             selected: false
           },
           {
-            name: '화보미넌2',
-            imgSrc: 'images/08.JPG',
+            name: '888',
+            imgSrc: 'images/08.gif',
             selected: false
           },
           {
-            name: '부부미넌2',
-            imgSrc: 'images/09.JPG',
+            name: '999',
+            imgSrc: 'images/09.jpg',
             selected: false
           },
           {
-            name: '나나투어미넌2',
-            imgSrc: 'images/10.JPG',
+            name: '101010',
+            imgSrc: 'images/10.gif',
             selected: false
           },
           {
-            name: 'xx미넌11',
-            imgSrc: 'images/11.JPG',
+            name: '111111',
+            imgSrc: 'images/11.gif',
             selected: false
           },
           {
-            name: 'xx미넌12',
-            imgSrc: 'images/12.JPG',
+            name: '121212',
+            imgSrc: 'images/12.gif',
             selected: false
           },
           {
-            name: 'xx미넌13',
-            imgSrc: 'images/13.JPG',
+            name: '131313',
+            imgSrc: 'images/13.jpg',
             selected: false
           },
           {
-            name: 'xx미넌14',
-            imgSrc: 'images/14.JPG',
+            name: '141414',
+            imgSrc: 'images/14.gif',
             selected: false
           },
           {
-            name: 'xx미넌15',
-            imgSrc: 'images/15.JPG',
+            name: '151515',
+            imgSrc: 'images/15.jpg',
             selected: false
           },
           {
-            name: 'xx미넌16',
-            imgSrc: 'images/16.JPG',
+            name: '161616',
+            imgSrc: 'images/16.gif',
             selected: false
           }
         ];
