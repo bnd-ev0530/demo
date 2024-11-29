@@ -242,6 +242,8 @@
     });
   }
 
+  let isAlertShown = false;
+
   Events.on(render, "afterRender", () => {
     if (isGameOver) {
       ctx.fillStyle = "#ffffff55";
@@ -260,6 +262,10 @@
         ctx.lineTo(480, 100);
         ctx.stroke();
       }
+    }
+    if (score > 20 && !isAlertShown) {
+      alert("미넌 웹진 Comming Soon...");
+      isAlertShown = true; // alert를 한 번 표시했음을 기록
     }
   });
 
