@@ -264,7 +264,7 @@
       }
     }
     if (score > 100 && !isAlertShown) {
-      alert("2025 민원웹진 Comming Soon...");
+      alert("2025 민원웹진 Comming Soon...✨");
       isAlertShown = true; // alert를 한 번 표시했음을 기록
     }
   });
