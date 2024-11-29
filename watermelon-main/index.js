@@ -242,6 +242,13 @@
     });
   }
 
+  let isAlertShown = false;
+
+  const alertBox = document.querySelector(".alert");
+  alertBox.addEventListener("click", function () {
+    this.classList.add("hidden");
+  });
+
   Events.on(render, "afterRender", () => {
     if (isGameOver) {
       ctx.fillStyle = "#ffffff55";
@@ -261,7 +268,7 @@
         ctx.stroke();
       }
     }
-    if (score > 100 && !isAlertShown) {
+    if (score > 517 && !isAlertShown) {
       alertBox.classList.remove("hidden");
       //alert("2025 민원웹진 Coming Soon...✨");
       isAlertShown = true; // alert를 한 번 표시했음을 기록
@@ -371,3 +378,32 @@
     return c;
   }
 })();
+
+const audioFiles = ["/assets/audio/bittersweet.mp3"];
+
+let currentAudioIndex = 0; // Track the current audio file
+
+const audioPlayer = document.getElementById("audioPlayer");
+const startButton = document.getElementById("startPlayback");
+
+// Function to play the next audio file
+function playNextAudio() {
+  audioPlayer.src = audioFiles[currentAudioIndex];
+  audioPlayer.play().catch((error) => {
+    console.error("Playback failed:", error);
+  });
+  currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
+}
+
+// Add an event listener to the button for user interaction
+startButton.addEventListener("click", () => {
+  playNextAudio();
+
+  // Continue playback automatically when the current audio ends
+  audioPlayer.addEventListener("ended", playNextAudio);
+});
+
+// Trigger the click event programmatically on page load
+window.addEventListener("load", () => {
+  startButton.click();
+});
