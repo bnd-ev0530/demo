@@ -263,8 +263,8 @@
         ctx.stroke();
       }
     }
-    if (score > 20 && !isAlertShown) {
-      alert("미넌 웹진 Comming Soon...");
+    if (score > 100 && !isAlertShown) {
+      alert("2025 민원웹진 Comming Soon...");
       isAlertShown = true; // alert를 한 번 표시했음을 기록
     }
   });
