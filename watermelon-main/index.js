@@ -242,12 +242,6 @@
     });
   }
 
-  let isAlertShown = false;
-  const alertBox = document.querySelector(".alert");
-  alertBox.addEventListener("click", function () {
-    this.classList.add("hidden");
-  });
-  
   Events.on(render, "afterRender", () => {
     if (isGameOver) {
       ctx.fillStyle = "#ffffff55";
@@ -268,7 +262,7 @@
       }
     }
     if (score > 100 && !isAlertShown) {
-      alertBox.classList.remove("hidden")
+      alertBox.classList.remove("hidden");
       //alert("2025 민원웹진 Coming Soon...✨");
       isAlertShown = true; // alert를 한 번 표시했음을 기록
     }
@@ -364,8 +358,8 @@
       render: {
         sprite: {
           texture: `assets/img/${size}.png`,
-          xScale: size / 12,
-          yScale: size / 12,
+          xScale: size / 12.75,
+          yScale: size / 12.75,
         },
       },
     });
