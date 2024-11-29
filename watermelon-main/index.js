@@ -229,7 +229,7 @@
             newBall(
               (bodies[0].position.x + bodies[1].position.x) / 2,
               (bodies[0].position.y + bodies[1].position.y) / 2,
-              bodies[0].size === 11 ? 11 : bodies[0].size + 1
+              bodies[0].size === 13 ? 13 : bodies[0].size + 1
             )
           );
 
@@ -384,26 +384,36 @@ const audioFiles = ["/assets/audio/bittersweet.mp3"];
 let currentAudioIndex = 0; // Track the current audio file
 
 const audioPlayer = document.getElementById("audioPlayer");
-const startButton = document.getElementById("startPlayback");
+const startPlayback = document.getElementById("startPlayback");
 
 // Function to play the next audio file
 function playNextAudio() {
+  // Update the source of the audio element
   audioPlayer.src = audioFiles[currentAudioIndex];
-  audioPlayer.play().catch((error) => {
-    console.error("Playback failed:", error);
-  });
+  audioPlayer.play();
+
+  // Move to the next audio file, looping back to the start if at the end
   currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
 }
 
-// Add an event listener to the button for user interaction
-startButton.addEventListener("click", () => {
-  playNextAudio();
+// Event listener for when the audio ends
+audioPlayer.addEventListener("ended", playNextAudio);
 
-  // Continue playback automatically when the current audio ends
-  audioPlayer.addEventListener("ended", playNextAudio);
-});
+// Start the first audio file
 
-// Trigger the click event programmatically on page load
-window.addEventListener("load", () => {
-  startButton.click();
-});
+startPlayback.addEventListener("click", playNextAudio());
+
+function toggleAudio() {
+  var audioElement = document.getElementById("player");
+  var soundOn = document.getElementById("play");
+  var soundOff = document.getElementById("pause");
+  if (audioElement.paused) {
+    audioElement.play();
+    $(soundOn).show();
+    $(soundOff).hide();
+  } else {
+    audioElement.pause();
+    $(soundOn).hide();
+    $(soundOff).show();
+  }
+}

@@ -147,6 +147,21 @@ a {
 #audioPlayer {
   display: none;
 }
+
+#play,
+#pause {
+  position: absolute;
+  width: 30px;
+  top: 5px;
+  right: 5px;
+}
+#play:hover,
+#pause:hover {
+  cursor: pointer;
+}
+#pause {
+  display: none;
+}
 @keyframes motion {
   0% {
     margin-top: 0px;

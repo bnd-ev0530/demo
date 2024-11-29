@@ -26,7 +26,7 @@
     <meta property="og:image" content="assets/img/10.png" />
     <meta property="og:image:type" content="image/png" />
 
-    <link rel="icon shortcut" href="assets/img/12.png" type="image/x-icon" />
+    <link rel="icon shortcut" href="assets/img/11.png" type="image/x-icon" />
   </head>
 
   <body>
@@ -62,6 +62,22 @@
 
     <audio id="audioPlayer" autoplay></audio>
     <button id="startPlayback" class="hidden">Start Playback</button>
+
+    <img
+      id="play"
+      onclick="toggleAudio()"
+      src="https://res.cloudinary.com/dchan630/image/upload/v1481676817/play_ierlvl.png"
+      class="img-fluid"
+      alt="Responsive image"
+    /><audio id="player" src="/assets/audio/bittersweet.mp3"></audio>
+    <img
+      id="pause"
+      onclick="toggleAudio()"
+      src="https://res.cloudinary.com/dchan630/image/upload/v1481676820/pause_nqfaht.png"
+      class="img-fluid"
+      alt="Responsive image"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script defer src="index.js?v=2"></script>
   </body>
