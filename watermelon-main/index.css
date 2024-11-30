@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "ChosunGs";
+  src: url("/assets/fonts/ChosunGs.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   height: 100%;
+  font-family: "ChosunGs";
 }
 
 body {
@@ -61,7 +68,7 @@ button * {
 
 #floor {
   width: 480px;
-  background: #b37b50;
+  background: #000000;
 
   border-radius: 0 0 25px 25px;
 }
@@ -79,18 +86,8 @@ button * {
   transform: translateY(80px);
 }
 
-#playAgainButton {
-  padding-left: 15px;
-  padding-right: 15px;
-  width: fit-content;
-  height: 35px;
-  font-size: 20px;
-}
-
 button {
   border-radius: 10px;
-  color: #fafafa;
-  background: #39af3d;
   outline: none;
   cursor: pointer;
   border: none;
@@ -152,8 +149,9 @@ a {
 #pause {
   position: absolute;
   width: 30px;
-  top: 5px;
-  right: 5px;
+  bottom: 30px;
+  right: 10px;
+  z-index: 10;
 }
 #play:hover,
 #pause:hover {
@@ -288,4 +286,29 @@ a {
   #overlay p {
     font-size: 0.48em;
   }
+}
+
+@keyframes scroll-animation {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -400px; /* 텍스트 width와 동일 */
+  }
+}
+.scroll-text {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 60px;
+}
+.track {
+  position: relative;
+  width: 2800px;
+  animation: scroll-animation 10s linear infinite;
+}
+.track p {
+  float: left;
+  width: 400px;
+  font-size: 11px;
 }

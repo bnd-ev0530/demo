@@ -41,7 +41,13 @@
 
   const background = Bodies.rectangle(240, 360, 480, 720, {
     isStatic: true,
-    render: { fillStyle: "#fe9" },
+    render: {
+      sprite: {
+        texture: "/assets/img/bgbg33.png", // 이미지 파일 경로
+        xScale: 1, // 이미지의 가로 크기 비율 조정
+        yScale: 1, // 이미지의 세로 크기 비율 조정
+      },
+    },
   });
   background.collisionFilter = {
     group: 0,
@@ -268,7 +274,7 @@
         ctx.stroke();
       }
     }
-    if (score > 517 && !isAlertShown) {
+    if (score > 1123 && !isAlertShown) {
       alertBox.classList.remove("hidden");
       //alert("2025 민원웹진 Coming Soon...✨");
       isAlertShown = true; // alert를 한 번 표시했음을 기록
@@ -276,7 +282,7 @@
   });
 
   function writeText(text, textAlign, x, y, size) {
-    ctx.font = `${size}px NanumSquare`;
+    ctx.font = `${size}px ChosunGs`;
     ctx.textAlign = textAlign;
     ctx.lineWidth = size / 8;
 
@@ -332,6 +338,7 @@
     score = 0;
 
     gameOverlayer.style.display = "none";
+    toggleAudio();
 
     while (engine.world.bodies.length > 4) {
       engine.world.bodies.pop();
@@ -401,12 +408,13 @@ audioPlayer.addEventListener("ended", playNextAudio);
 
 // Start the first audio file
 
-startPlayback.addEventListener("click", playNextAudio());
-
 function toggleAudio() {
   var audioElement = document.getElementById("player");
   var soundOn = document.getElementById("play");
   var soundOff = document.getElementById("pause");
+  // 무한 반복 설정
+  audioElement.loop = true;
+
   if (audioElement.paused) {
     audioElement.play();
     $(soundOn).show();
@@ -417,3 +425,23 @@ function toggleAudio() {
     $(soundOff).show();
   }
 }
+
+function shareToTwitter(text, url, hashtags = "") {
+  const twitterBaseUrl = "https://twitter.com/intent/tweet";
+  const params = new URLSearchParams({
+    text: text, // The tweet content
+    url: url, // Optional: A URL to include in the tweet
+    hashtags: hashtags,
+  });
+
+  // Open a new window for the Twitter share
+  window.open(`${twitterBaseUrl}?${params.toString()}`, "_blank");
+}
+
+// Attach to button click
+document.getElementById("shareButton").addEventListener("click", function () {
+  const tweetText = "민원 수박 게임 점수 : " + score; // Your tweet message
+  const pageUrl = window.location.href; // The current page URL
+  const hashtags = "#민원웹진 #반야몽";
+  shareToTwitter(tweetText, pageUrl, hashtags);
+});

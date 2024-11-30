@@ -36,8 +36,9 @@
       <div class="item" id="game">
         <div id="overlay">
           <button id="playAgainButton" onclick="location.reload()">
-            Play Again
+            다시하기
           </button>
+          <button id="shareButton">공유하기</button>
         </div>
         <canvas id="canvas"></canvas>
         <div id="floor"></div>
@@ -60,23 +61,33 @@
       <p>2025 민원웹진 Coming Soon...✨</p>
     </div>
 
-    <audio id="audioPlayer" autoplay></audio>
-    <button id="startPlayback" class="hidden">Start Playback</button>
+    <audio id="audioPlayer" autoplay loop></audio>
 
     <img
       id="play"
       onclick="toggleAudio()"
-      src="https://res.cloudinary.com/dchan630/image/upload/v1481676817/play_ierlvl.png"
+      src="/assets/img/play.png"
       class="img-fluid"
       alt="Responsive image"
     /><audio id="player" src="/assets/audio/bittersweet.mp3"></audio>
     <img
       id="pause"
       onclick="toggleAudio()"
-      src="https://res.cloudinary.com/dchan630/image/upload/v1481676820/pause_nqfaht.png"
+      src="/assets/img/pause.png"
       class="img-fluid"
       alt="Responsive image"
     />
+
+    <div class="scroll-text">
+      <div class="track">
+        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
+        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
+        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
+        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
+        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script defer src="index.js?v=2"></script>
