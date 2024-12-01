@@ -1,3 +1,5 @@
+let score = 0;
+
 (() => {
   const Engine = Matter.Engine,
     Render = Matter.Render,
@@ -35,19 +37,12 @@
   let newSize = 1;
 
   let isGameOver = false;
-  let score = 0;
 
   let isLineEnable = false;
 
   const background = Bodies.rectangle(240, 360, 480, 720, {
     isStatic: true,
-    render: {
-      sprite: {
-        texture: "/assets/img/bgbg33.png", // 이미지 파일 경로
-        xScale: 1, // 이미지의 가로 크기 비율 조정
-        yScale: 1, // 이미지의 세로 크기 비율 조정
-      },
-    },
+    render: { fillStyle: "#fe9" },
   });
   background.collisionFilter = {
     group: 0,
@@ -274,10 +269,18 @@
         ctx.stroke();
       }
     }
-    if (score > 1123 && !isAlertShown) {
+    if (score > 517 && !isAlertShown) {
       alertBox.classList.remove("hidden");
       //alert("2025 민원웹진 Coming Soon...✨");
       isAlertShown = true; // alert를 한 번 표시했음을 기록
+      background.render.sprite.texture = "/assets/img/bg1.png";
+      floor.classList.add("black");
+
+      // 배경 음악 변경
+      //var audioElement = document.getElementById("player");
+      //audioElement.src = "/assets/audio/CaliforniaDreamin.mp3"; // 새로운 음악 파일 경로
+      //audioElement.load(); // 새로운 음악 파일 로드
+      //audioElement.play(); // 재생
     }
   });
 
@@ -352,7 +355,6 @@
     engine.timing.timeScale = 0;
 
     gameOverlayer.style.display = "";
-
     if (ball != null) World.remove(engine.world, ball);
   }
 
@@ -386,25 +388,24 @@
   }
 })();
 
-const audioFiles = ["/assets/audio/bittersweet.mp3"];
+// const audioFiles = ["/assets/audio/bittersweet.mp3"];
 
-let currentAudioIndex = 0; // Track the current audio file
+// let currentAudioIndex = 0; // Track the current audio file
 
-const audioPlayer = document.getElementById("audioPlayer");
-const startPlayback = document.getElementById("startPlayback");
+// const audioPlayer = document.getElementById("audioPlayer");
 
-// Function to play the next audio file
-function playNextAudio() {
-  // Update the source of the audio element
-  audioPlayer.src = audioFiles[currentAudioIndex];
-  audioPlayer.play();
+// // Function to play the next audio file
+// function playNextAudio() {
+//   // Update the source of the audio element
+//   audioPlayer.src = audioFiles[currentAudioIndex];
+//   audioPlayer.play();
 
-  // Move to the next audio file, looping back to the start if at the end
-  currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
-}
+//   // Move to the next audio file, looping back to the start if at the end
+//   currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
+// }
 
-// Event listener for when the audio ends
-audioPlayer.addEventListener("ended", playNextAudio);
+// // Event listener for when the audio ends
+// audioPlayer.addEventListener("ended", playNextAudio);
 
 // Start the first audio file
 
@@ -426,12 +427,11 @@ function toggleAudio() {
   }
 }
 
-function shareToTwitter(text, url, hashtags = "") {
+function shareToTwitter(text, url) {
   const twitterBaseUrl = "https://twitter.com/intent/tweet";
   const params = new URLSearchParams({
     text: text, // The tweet content
     url: url, // Optional: A URL to include in the tweet
-    hashtags: hashtags,
   });
 
   // Open a new window for the Twitter share
@@ -440,8 +440,10 @@ function shareToTwitter(text, url, hashtags = "") {
 
 // Attach to button click
 document.getElementById("shareButton").addEventListener("click", function () {
-  const tweetText = "민원 수박 게임 점수 : " + score; // Your tweet message
-  const pageUrl = window.location.href; // The current page URL
-  const hashtags = "#민원웹진 #반야몽";
-  shareToTwitter(tweetText, pageUrl, hashtags);
+  const tweetText =
+    "💚민원 수박 게임💜 \n점수 : " +
+    score +
+    " \n \n#민원웹진_半夜夢 \n#사랑에도_유통기한이_있다면_1123년 \n🔗"; // Your tweet message
+  const pageUrl = "https://mingyuwonwoo.netlify.app/"; // The current page URL
+  shareToTwitter(tweetText, pageUrl);
 });

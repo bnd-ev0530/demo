@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
 
-    <link href="index.css?v=2" rel="stylesheet" />
+    <link href="index.css?v=4" rel="stylesheet" />
     <link
       rel="stylesheet"
       as="style"
@@ -17,14 +17,20 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 
-    <title>2024 민원수박게임</title>
+    <title>민원수박게임</title>
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="watermelon" />
-    <meta property="og:title" content="watermelon" />
-    <meta property="og:description" content="Play Watermelon Game!" />
-    <meta property="og:image" content="assets/img/10.png" />
+    <meta property="og:site_name" content="민원수박게임" />
+    <meta property="og:title" content="민원수박게임" />
+    <meta property="og:description" content="민원수박게임" />
+    <meta property="og:image" content="assets/img/11.png" />
     <meta property="og:image:type" content="image/png" />
+    <!-- 트위터 미리보기(meta 정보) 설정 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="민원수박게임" />
+    <meta name="twitter:description" content="민원수박게임" />
+    <meta name="twitter:image" content="assets/img/11.png" />
+    <meta name="twitter:url" content="https://mingyuwonwoo.netlify.app/" />
 
     <link rel="icon shortcut" href="assets/img/11.png" type="image/x-icon" />
   </head>
@@ -46,22 +52,23 @@
 
       <div class="empty"></div>
       <div class="empty"></div>
-
+      <!-- 
       <div class="item" id="footer">
-        <!-- <div id="links">
+       <div id="links">
           <a href="https://shinyou.ng">shinyoung</a>
           <a href="https://github.com/choshinyoung/watermelon">Github</a>
         </div>
 
-        <p>Made with ❤️ by choshinyoung</p> -->
-      </div>
+        <p>Made with ❤️ by choshinyoung</p> 
+      </div>-->
     </div>
 
     <div class="alert hidden">
-      <p>2025 민원웹진 Coming Soon...✨</p>
+      <!-- <img src="/assets/img/alert.png" /> -->
+      <div class="image-container"></div>
     </div>
 
-    <audio id="audioPlayer" autoplay loop></audio>
+    <!-- <audio id="audioPlayer" autoplay loop></audio> -->
 
     <img
       id="play"
@@ -69,7 +76,12 @@
       src="/assets/img/play.png"
       class="img-fluid"
       alt="Responsive image"
-    /><audio id="player" src="/assets/audio/bittersweet.mp3"></audio>
+    /><audio
+      id="player"
+      src="/assets/audio/bittersweet.mp3"
+      autoplay
+      loop
+    ></audio>
     <img
       id="pause"
       onclick="toggleAudio()"
@@ -78,18 +90,8 @@
       alt="Responsive image"
     />
 
-    <div class="scroll-text">
-      <div class="track">
-        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
-        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
-        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
-        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
-        <p>半夜夢 : 사랑은 어쩌다 사랑이 됐을까</p>
-      </div>
-    </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script defer src="index.js?v=2"></script>
+    <script defer src="index.js?v=4"></script>
   </body>
 </html>

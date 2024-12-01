@@ -68,9 +68,12 @@ button * {
 
 #floor {
   width: 480px;
-  background: #000000;
-
+  background: #b37b50;
   border-radius: 0 0 25px 25px;
+}
+
+#floor.black {
+  background: #000;
 }
 
 #overlay {
@@ -112,24 +115,44 @@ a {
 
 .alert {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: black;
   box-sizing: border-box;
-  width: 50%;
-  height: 50px;
-  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  animation: motion 0.3s linear 0s infinite alternate;
-  -moz-animation: motion 0.3s linear 0s infinite alternate;
-  -webkit-animation: motion 0.3s linear 0s infinite alternate;
-  -o-animation: motion 0.3s linear 0s infinite alternate;
+  animation: motion 1s linear 1s infinite alternate;
+  -moz-animation: motion 1s linear 1s infinite alternate;
+  -webkit-animation: motion 1s linear 1s infinite alternate;
+  -o-animation: motion 1s linear 1s infinite alternate;
 }
+
+.image-container {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center center;
+  animation: changeImage 6s infinite;
+}
+
+/* Define keyframes for changing background images */
+@keyframes changeImage {
+  0% {
+    background-image: url("/assets/img/alert.png");
+  }
+  33% {
+    background-image: url("/assets/img/alert_off.png");
+  }
+  66% {
+    background-image: url("/assets/img/alert.png");
+  }
+  100% {
+    background-image: url("/assets/img/alert_off.png");
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -149,8 +172,8 @@ a {
 #pause {
   position: absolute;
   width: 30px;
-  bottom: 30px;
-  right: 10px;
+  bottom: 5vw;
+  right: 2vw;
   z-index: 10;
 }
 #play:hover,
@@ -165,7 +188,7 @@ a {
     margin-top: 0px;
   }
   100% {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 }
 
