@@ -71,7 +71,7 @@ p {
 	padding-bottom: 100%;
 	grid-area: var(--area, auto);
 	border: none;
-	background: url(/PuzzleGame/images/31.jpg);
+	background: url(/demo/PuzzleGame/images/31.jpg);
 	background-size: 300%;
 }
 
